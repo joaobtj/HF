@@ -15,7 +15,7 @@ diameter <- function(hf, Q, L, RC, v = 1.01e-6, g = 9.81, x1 = 0.06) {
 
   # assuming laminar flow
   D <- ((v * L * Q * 128) / (g * pi * hf))^(1 / 4)
-  Re <- (4 * Q) / (pi * D * v)
+  Re <- re(D, Q, v)
 
   if (Re < 2000) {
     # is laminar flow: do nothing

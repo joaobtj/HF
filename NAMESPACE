@@ -3,3 +3,4 @@
 export(diameter)
 export(flow_rate)
 export(head_loss)
+export(re)

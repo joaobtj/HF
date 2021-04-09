@@ -27,7 +27,7 @@
 head_loss <- function(D, Q, L, RC, v = 1.01e-6, g = 9.81, x1 = 0.06) {
 
   # Reynolds number
-  Re <- (4 * Q) / (pi * D * v)
+  Re <- re(D, Q, v)
 
   ## laminar flow
   if (Re < 2000) {

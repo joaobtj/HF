@@ -15,7 +15,7 @@ flow_rate <- function(hf, D, L, RC, v = 1.01e-6, g = 9.81) {
 
   # assuming laminar flow
   Q <- (2 * g * pi * hf * D^4) / (256 * v * L)
-  Re <- (4 * Q) / (pi * D * v)
+  Re <- re(D, Q, v)
 
   # laminar flow
   if (Re < 2000) {
